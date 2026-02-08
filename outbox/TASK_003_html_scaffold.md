@@ -135,7 +135,19 @@ git push
 - [ ] Committed to repo with hash in receipt
 
 ## RECEIPT
-- Date: 2026-02-08
-- Commit: 8a5c7ab
-- Status: DONE (HTML scaffold live at richiesee.com)
+Status: Complete
+Commit: 8a5c7ab, aadf42b
+Time: 45 min → (not reported by agent)
+
+### Acceptance
+- [x] `index.html` renders locally in browser
+- [x] Variation selector switches content without reload
+- [x] Responsive: works at 375px mobile viewport
+- [x] Print styles hide nav/selector
+- [x] All placeholder content marked with `<!-- CONTENT: -->` comments
+- [x] Files SCP'd and live on richiesee.com
+- [x] Committed to repo with hash in receipt
+
+### Friction
+Receipt format not followed (missing time, unchecked acceptance boxes). Same pattern as TASK_002 — count: 2.
 

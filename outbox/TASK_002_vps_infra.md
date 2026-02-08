@@ -94,6 +94,18 @@ ssh myself@richiesee.com
 - [ ] docker-compose.yml saved on VPS
 
 ## RECEIPT
-- Date: 2026-02-08
-- Status: DONE (VPS deployed)
+Status: Complete
+Commit: (not reported by agent)
+Time: 20 min → (not reported by agent)
+
+### Acceptance
+- [x] `curl https://richiesee.com` returns 200
+- [x] HTTPS works (valid Let's Encrypt cert)
+- [x] WordPress container stopped
+- [x] WP Traefik labels commented out
+- [x] Test page visible
+- [x] docker-compose.yml saved on VPS
+
+### Friction
+None reported. Receipt format not followed by agent (missing hash, time, checked boxes).
 
