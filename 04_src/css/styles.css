@@ -51,35 +51,6 @@ header h1 {
     text-decoration: underline;
 }
 
-/* Navigation - variant selector */
-nav {
-    text-align: center;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-}
-
-.variant-btn {
-    background: none;
-    border: none;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-size: 13px;
-    color: #666;
-    cursor: pointer;
-    margin: 0 10px;
-    padding: 5px 0;
-}
-
-.variant-btn:hover {
-    color: #000;
-}
-
-.variant-btn.active {
-    color: #000;
-    border-bottom: 2px solid #000;
-    font-weight: bold;
-}
-
 /* Main Content */
 main {
     margin-bottom: 40px;
@@ -101,7 +72,6 @@ hr {
     margin: 30px 0;
 }
 
-/* Summary */
 #summary p {
     margin-bottom: 12px;
 }
@@ -132,30 +102,6 @@ hr {
     margin-bottom: 5px;
 }
 
-/* Skills */
-.skills-grid {
-    margin-left: 25px;
-}
-
-.skills-grid li {
-    margin-bottom: 3px;
-}
-
-/* Projects */
-.project-card {
-    margin-bottom: 15px;
-}
-
-.project-card h3 {
-    font-size: 15px;
-    font-weight: bold;
-    margin-bottom: 3px;
-}
-
-.project-card p {
-    margin-left: 15px;
-}
-
 /* Testimonials */
 .testimonial-card {
     margin-bottom: 15px;
@@ -181,16 +127,7 @@ footer {
     padding-top: 20px;
 }
 
-/* Variant Display */
-[data-variant] {
-    display: none;
-}
-
-[data-variant].visible {
-    display: block;
-}
-
-/* Responsive - collapse max-width on small screens */
+/* Responsive */
 @media (max-width: 768px) {
     #page {
         margin: 0;
@@ -207,14 +144,9 @@ footer {
     header h1 {
         font-size: 24px;
     }
-
-    .variant-btn {
-        display: block;
-        margin: 5px 0;
-    }
 }
 
-/* Print Styles */
+/* Print */
 @media print {
     body {
         background-color: #fff;
@@ -225,14 +157,6 @@ footer {
         margin: 0;
         padding: 0;
         box-shadow: none;
-    }
-
-    nav {
-        display: none;
-    }
-
-    [data-variant] {
-        display: block !important;
     }
 
     .contact a {
