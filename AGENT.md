@@ -49,14 +49,31 @@ resume_site/
 
 ---
 
+## STANDARDS
+
+Your task file includes a **STANDARDS** section with specific rules for that job. Follow them.
+
+If your task file does NOT have a standards section, apply these minimums:
+- Fix at source, not destination
+- Lint before commit (or manual check if no linter)
+- Stage-by-stage: build → verify → commit → next stage
+- Test the spread — not just the happy path
+- Log with levels (DEBUG/INFO/WARNING/ERROR)
+- No hardcoded credentials
+- Git commit before reporting done
+- Friction mandatory if time > 1.5x estimate
+
+---
+
 ## Agent Protocol
 
 1. Read task from `inbox/`
-2. Execute within scope
-3. Git commit + push with task ID
-4. Append receipt to task file
-5. Move task to `outbox/`
-6. Die
+2. Execute within scope — **staged, verified at each step**
+3. Lint / verify before commit
+4. Git commit + push with task ID
+5. Append receipt to task file (with commit hash)
+6. Move task to `outbox/`
+7. Die
 
 ---
 
