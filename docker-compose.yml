@@ -1,0 +1,23 @@
+services:
+  resume_site:
+    image: nginx:alpine
+    container_name: resume_site
+    restart: unless-stopped
+    volumes:
+      - ./html:/usr/share/nginx/html:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.resume.rule=Host(`richiesee.com`) || Host(`www.richiesee.com`)"
+      - "traefik.http.routers.resume.entrypoints=https"
+      - "traefik.http.routers.resume.tls.certresolver=letsencrypt"
+      - "traefik.http.services.resume.loadbalancer.server.port=80"
+      - "traefik.http.middlewares.www-redirect.redirectregex.regex=^https://www\\.richiesee\\.com/(.*)"
+      - "traefik.http.middlewares.www-redirect.redirectregex.replacement=https://richiesee.com/$${1}"
+      - "traefik.http.middlewares.www-redirect.redirectregex.permanent=true"
+      - "traefik.http.routers.resume.middlewares=www-redirect"
+    networks:
+      - web
+
+networks:
+  web:
+    external: true

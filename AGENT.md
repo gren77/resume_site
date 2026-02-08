@@ -42,8 +42,10 @@ resume_site/
 ├── outbox/           ← completed tasks
 ├── 04_src/           ← source code
 │   ├── index.html
-│   ├── styles.css
-│   └── script.js
+│   ├── css/
+│   │   └── styles.css
+│   └── js/
+│       └── script.js
 └── assets/           ← images, etc.
 ```
 
